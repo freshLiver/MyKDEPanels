@@ -13,9 +13,9 @@
         ],
         
         "EnabledByDefault": true,
-        "Id": "com.freshiver.commandPanel",
+        "Id": "com.github.freshiver.commandPanel",
         "License": "LGPLv2+",
-        "Name": "My KDE Command Panel",
+        "Name": "freshLievr's KDE Command Panel",
         "ServiceTypes": [
             "Plasma/LayoutTemplate"
         ],
