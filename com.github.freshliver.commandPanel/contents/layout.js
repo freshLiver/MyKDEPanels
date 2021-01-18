@@ -12,17 +12,22 @@ for (i = 0; i < panelIds.length; ++i) {
     }
 }
 
-if (freeEdges["bottom"] == true) {
-    panel.location = "bottom";
-} else if (freeEdges["top"] == true) {
+// prefer top 
+if (freeEdges["top"] == true) {
     panel.location = "top";
-} else if (freeEdges["left"] == true) {
-    panel.location = "left";
-} else if (freeEdges["right"] == true) {
-    panel.location = "right";
-} else {
-    // There is no free edge, so leave the default value
+} 
+else if (freeEdges["bottom"] == true) {
     panel.location = "bottom";
+} 
+else if (freeEdges["left"] == true) {
+    panel.location = "left";
+} 
+else if (freeEdges["right"] == true) {
+    panel.location = "right";
+} 
+// There is no free edge, but still prefer top
+else {
+    panel.location = "top";
 }
 
 panel.height = gridUnit * 1
@@ -134,10 +139,70 @@ if (langIds.indexOf(languageId) != -1) {
     panel.addWidget("org.kde.plasma.kimpanel");
 }
 
-panel.addWidget("org.kde.plasma.systemtray")
+// my systemtray items (left to right)
 
+// 1. left most is application icons
+var sysTray = panel.addWidget("org.kde.plasma.systemtray")
+sysTray.currentConfigGroup = ["General/Categories"]
+sysTray.writeConfig("miscellaneousShown", "false")
+sysTray.writeConfig("hardwareControlShown", "false")
+sysTray.writeConfig("systemServicesShown", "false")
+sysTray.writeConfig("communicationsShown", "false")
+sysTray.writeConfig("applicationStatusShown", "false")
+
+sysTray.writeConfig("hiddenItems", [
+    'org.kde.plasma.vault',
+    'org.kde.plasma.bluetooth',
+    'org.kde.plasma.devicenotifier',
+    'org.kde.plasma.clipboard',
+    'org.kde.plasma.battery',
+    'org.kde.plasma.networkmanagement',
+    //'org.kde.discovernotifier',
+    'org.kde.plasma.volume',
+    'org.kde.kdeconnect',
+    //'org.kde.plasma.printmanager',
+    'org.kde.plasma.mediacontroller'
+    //'org.kde.plasma.notifications'
+])
+
+
+// 2. next is org.kde.plasma.devicenotifier
+var devicenotifier = panel.addWidget("org.kde.plasma.devicenotifier")
+devicenotifier.currentConfigGroup = ["General"]
+devicenotifier.writeConfig("removableDevices", "true")
+devicenotifier.writeConfig("popupOnNewDevice", "true")
+
+// 3. and then org.kde.plasma.battery
+var battery = panel.addWidget("org.kde.plasma.battery")
+battery.currentConfigGroup = ["General"]
+battery.writeConfig("showPercentage", "false")
+
+// 4. and then org.kde.plasma.volume
+var volume = panel.addWidget("org.kde.plasma.volume")
+volume.currentConfigGroup = ["General"]
+volume.writeConfig("maximumVolume", "100")
+volume.writeConfig("volumeStep", "5")
+volume.writeConfig("volumeFeedback", "true")
+
+// 5. and then org.kde.plasma.bluetooth
+var bluetooth = panel.addWidget("org.kde.plasma.bluetooth")
+
+// 6. last is org.kde.plasma.networkmanagement
+var networkmanagement = panel.addWidget("org.kde.plasma.networkmanagement")
+
+
+
+// digital clock with seconds
 var digitalClock = panel.addWidget("org.kde.plasma.digitalclock")
 digitalClock.currentConfigGroup = ["Configuration/Appearance"]
 digitalClock.writeConfig("showSeconds", "true")
+
+
+// show user icon(face)
+var userSwitcher = panel.addWidget("org.kde.plasma.userswitcher")
+userSwitcher.currentConfigGroup = ["General"]
+userSwitcher.writeConfig("showFace", "true")
+userSwitcher.writeConfig("showName", "false")
+userSwitcher.writeConfig("showFullName", "true")
 
 

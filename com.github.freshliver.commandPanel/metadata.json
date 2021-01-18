@@ -13,7 +13,7 @@
         ],
         
         "EnabledByDefault": true,
-        "Id": "com.github.freshiver.commandPanel",
+        "Id": "com.github.freshliver.commandPanel",
         "License": "LGPLv2+",
         "Name": "freshLievr's KDE Command Panel",
         "ServiceTypes": [
