@@ -1,0 +1,31 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "freshliver.cys@gmail.com",
+                "Name": "freshLiver"
+            }
+        ],
+        "Category": "",
+        "Dependencies": [
+        ],
+        "Description": "Default panel featuring application launcher, task manager and system tray",
+        
+        "EnabledByDefault": true,
+        "Id": "com.github.freshliver.appLauncher",
+        "License": "LGPLv2+",
+        
+        "Name": "Default Panel",
+        "Name[zh_TW]": "預設面板",
+        
+        "ServiceTypes": [
+            "Plasma/LayoutTemplate"
+        ],
+        "Version": "1.0",
+        "Website": "http://plasma.kde.org/"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "panel"
+    ],
+    "X-Plasma-Shell": "plasmashell"
+}
