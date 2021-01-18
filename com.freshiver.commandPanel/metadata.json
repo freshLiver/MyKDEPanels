@@ -1,0 +1,29 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "freshliver.cys@gmail.com",
+                "Name": "freshLievr"
+            }
+        ],
+        
+        "Category": "",
+        "Dependencies": [
+            
+        ],
+        
+        "EnabledByDefault": true,
+        "Id": "com.freshiver.commandPanel",
+        "License": "LGPLv2+",
+        "Name": "My KDE Command Panel",
+        "ServiceTypes": [
+            "Plasma/LayoutTemplate"
+        ],
+        "Version": "1.0",
+        "Website": "http://kubuntu.org/"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "panel"
+    ],
+    "X-Plasma-Shell": "plasmashell"
+}
