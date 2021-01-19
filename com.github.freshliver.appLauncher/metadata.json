@@ -15,8 +15,7 @@
         "Id": "com.github.freshliver.appLauncher",
         "License": "LGPLv2+",
         
-        "Name": "Default Panel",
-        "Name[zh_TW]": "預設面板",
+        "Name": "freshLiver's KDE app launcher Panel",
         
         "ServiceTypes": [
             "Plasma/LayoutTemplate"
