@@ -143,37 +143,37 @@ if (langIds.indexOf(languageId) != -1) {
 
 // 1. left most is application icons
 var sysTray = panel.addWidget("org.kde.plasma.systemtray")
+sysTray.currentConfigGroup = ["General"]
+sysTray.writeConfig("miscellaneousShown", "false")
+sysTray.writeConfig("hardwareControlShown", "false")
+sysTray.writeConfig("systemServicesShown", "false")
+sysTray.writeConfig("communicationsShown", "false")
+sysTray.writeConfig("applicationStatusShown", "true")
 
 
-// 2. second, org.kde.plasma.notifications
-var notifications = panel.addWidget("org.kde.plasma.notifications")
-notifications.currentConfigGroup = ["General"]
-notifications.writeConfig("showNotifications", "true")
-notifications.writeConfig("showJobs", "true")
-notifications.writeConfig("showHistory", "true")
 
-// 3. next is org.kde.plasma.devicenotifier
+// 2. second, devicenotifier
 var devicenotifier = panel.addWidget("org.kde.plasma.devicenotifier")
 devicenotifier.currentConfigGroup = ["General"]
 devicenotifier.writeConfig("removableDevices", "true")
 devicenotifier.writeConfig("popupOnNewDevice", "true")
 
-// 4. and then org.kde.plasma.battery
+// 3. and then org.kde.plasma.battery
 var battery = panel.addWidget("org.kde.plasma.battery")
 battery.currentConfigGroup = ["General"]
 battery.writeConfig("showPercentage", "false")
 
-// 5. and then org.kde.plasma.volume
+// 4. and then org.kde.plasma.volume
 var volume = panel.addWidget("org.kde.plasma.volume")
 volume.currentConfigGroup = ["General"]
 volume.writeConfig("maximumVolume", "100")
 volume.writeConfig("volumeStep", "5")
 volume.writeConfig("volumeFeedback", "true")
 
-// 6. and then org.kde.plasma.bluetooth
+// 5. and then org.kde.plasma.bluetooth
 var bluetooth = panel.addWidget("org.kde.plasma.bluetooth")
 
-// 7. last is org.kde.plasma.networkmanagement
+// 6. last is org.kde.plasma.networkmanagement
 var networkmanagement = panel.addWidget("org.kde.plasma.networkmanagement")
 
 
