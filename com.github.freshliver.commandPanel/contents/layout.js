@@ -143,27 +143,7 @@ if (langIds.indexOf(languageId) != -1) {
 
 // 1. left most is application icons
 var sysTray = panel.addWidget("org.kde.plasma.systemtray")
-sysTray.currentConfigGroup = ["Categories"]
-sysTray.writeConfig("miscellaneousShown", "false")
-sysTray.writeConfig("hardwareControlShown", "false")
-sysTray.writeConfig("systemServicesShown", "false")
-sysTray.writeConfig("communicationsShown", "false")
-sysTray.writeConfig("applicationStatusShown", "false")
 
-sysTray.writeConfig("hiddenItems", [
-    'org.kde.plasma.vault',
-    'org.kde.plasma.bluetooth',
-    'org.kde.plasma.devicenotifier',
-    'org.kde.plasma.clipboard',
-    'org.kde.plasma.battery',
-    'org.kde.plasma.networkmanagement',
-    //'org.kde.discovernotifier',
-    'org.kde.plasma.volume',
-    'org.kde.kdeconnect',
-    //'org.kde.plasma.printmanager',
-    'org.kde.plasma.mediacontroller'
-    'org.kde.plasma.notifications'
-])
 
 // 2. second, org.kde.plasma.notifications
 var notifications = panel.addWidget("org.kde.plasma.notifications")
