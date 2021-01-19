@@ -90,6 +90,12 @@ if (langIds.indexOf(languageId) != -1) {
     panel.addWidget("org.kde.plasma.kimpanel");
 }
 
+var notifications = panel.addWidget("org.kde.plasma.notifications")
+notifications.currentConfigGroup = ["General"]
+notifications.writeConfig("showNotifications", "true")
+notifications.writeConfig("showJobs", "true")
+notifications.writeConfig("showHistory", "true")
+
 var virtualDesktopPager = panel.addWidget("org.kde.plasma.pager")
 virtualDesktopPager.currentConfigGroup = ["General"]
 virtualDesktopPager.writeConfig("displayedText","Number")
