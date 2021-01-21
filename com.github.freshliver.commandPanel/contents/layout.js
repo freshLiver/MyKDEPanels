@@ -47,7 +47,7 @@ netSpeed.currentConfigGroup = ["Configuration/General"]
 netSpeed.writeConfig("command", "sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/DownloadUploadSpeed.sh")
 netSpeed.writeConfig("interval", "1000")
 netSpeed.writeConfig("textColor", "#eff0f1")
-netSpeed.writeConfig("fontSize", "17")
+netSpeed.writeConfig("fontSize", "15")
 netSpeed.writeConfig("bold", "true")
 
 // SPACE
@@ -59,7 +59,7 @@ cpuUsage.currentConfigGroup = ["Configuration/General"]
 cpuUsage.writeConfig("command", "sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/CPUUsage.sh")
 cpuUsage.writeConfig("interval", "1000")
 cpuUsage.writeConfig("textColor", "#f10004")
-cpuUsage.writeConfig("fontSize", "17")
+cpuUsage.writeConfig("fontSize", "15")
 cpuUsage.writeConfig("bold", "true")
 
 
@@ -68,7 +68,7 @@ cpuTemp.currentConfigGroup = ["Configuration/General"]
 cpuTemp.writeConfig("command", "sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/CPUTemperature.sh")
 cpuTemp.writeConfig("interval", "2000")
 cpuTemp.writeConfig("textColor", "#f19900")
-cpuTemp.writeConfig("fontSize", "17")
+cpuTemp.writeConfig("fontSize", "15")
 cpuTemp.writeConfig("bold", "true")
 
 
@@ -78,7 +78,7 @@ keyState.currentConfigGroup = ["Configuration/General"]
 keyState.writeConfig("command", "sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/KeyboardLockState.sh")
 keyState.writeConfig("interval", "1000")
 keyState.writeConfig("textColor", "#eff0f1")
-keyState.writeConfig("fontSize", "16")
+keyState.writeConfig("fontSize", "15")
 keyState.writeConfig("bold", "true")
 
 
@@ -88,7 +88,7 @@ memUsage.currentConfigGroup = ["Configuration/General"]
 memUsage.writeConfig("command", "sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/MemUsage.sh")
 memUsage.writeConfig("interval", "5000")
 memUsage.writeConfig("textColor", "#00f108")
-memUsage.writeConfig("fontSize", "17")
+memUsage.writeConfig("fontSize", "15")
 memUsage.writeConfig("bold", "true")
 
 
@@ -156,7 +156,7 @@ sysTray.writeConfig("applicationStatusShown", "true")
 var devicenotifier = panel.addWidget("org.kde.plasma.devicenotifier")
 devicenotifier.currentConfigGroup = ["General"]
 devicenotifier.writeConfig("removableDevices", "true")
-devicenotifier.writeConfig("popupOnNewDevice", "true")
+devicenotifier.writeConfig("popupOnNewDevice", "false")
 
 // 3. and then org.kde.plasma.battery
 var battery = panel.addWidget("org.kde.plasma.battery")
