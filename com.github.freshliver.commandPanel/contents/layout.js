@@ -66,7 +66,7 @@ cpuUsage.writeConfig("bold", "true")
 var cpuTemp= panel.addWidget("com.github.zren.commandoutput")
 cpuTemp.currentConfigGroup = ["Configuration/General"]
 cpuTemp.writeConfig("command", "sh /home/freshliver/Dropbox/Backup/Settings/ShellScripts/CPUTemperature.sh")
-cpuTemp.writeConfig("interval", "2000")
+cpuTemp.writeConfig("interval", "5000")
 cpuTemp.writeConfig("textColor", "#f19900")
 cpuTemp.writeConfig("fontSize", "15")
 cpuTemp.writeConfig("bold", "true")
@@ -144,11 +144,11 @@ if (langIds.indexOf(languageId) != -1) {
 // 1. left most is application icons
 var sysTray = panel.addWidget("org.kde.plasma.systemtray")
 sysTray.currentConfigGroup = ["General"]
-sysTray.writeConfig("miscellaneousShown", "false")
-sysTray.writeConfig("hardwareControlShown", "false")
-sysTray.writeConfig("systemServicesShown", "false")
-sysTray.writeConfig("communicationsShown", "false")
-sysTray.writeConfig("applicationStatusShown", "true")
+sysTray.writeGlobalConfig("miscellaneousShown", "false")
+sysTray.writeGlobalConfig("hardwareControlShown", "false")
+sysTray.writeGlobalConfig("systemServicesShown", "false")
+sysTray.writeGlobalConfig("communicationsShown", "false")
+sysTray.writeGlobalConfig("applicationStatusShown", "true")
 
 
 
