@@ -152,11 +152,13 @@ sysTray.writeGlobalConfig("applicationStatusShown", "true")
 
 
 
-// 2. second, devicenotifier
+// 2. second, devicenotifier, kdeconnect
 var devicenotifier = panel.addWidget("org.kde.plasma.devicenotifier")
 devicenotifier.currentConfigGroup = ["General"]
 devicenotifier.writeConfig("removableDevices", "true")
 devicenotifier.writeConfig("popupOnNewDevice", "false")
+
+var kdeconnect = panel.addwidget("org.kde.kdeconnect")
 
 // 3. and then org.kde.plasma.battery
 var battery = panel.addWidget("org.kde.plasma.battery")
@@ -188,5 +190,5 @@ digitalClock.writeConfig("showSeconds", "true")
 var userSwitcher = panel.addWidget("org.kde.plasma.userswitcher")
 userSwitcher.currentConfigGroup = ["General"]
 userSwitcher.writeConfig("showFace", "true")
-userSwitcher.writeConfig("showName", "false")
+userSwitcher.writeConfig("showName", "true")
 userSwitcher.writeConfig("showFullName", "true")

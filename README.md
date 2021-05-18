@@ -1,5 +1,7 @@
 # My KDE Settings 
 
+## 變更 Title Bar Color
+
 ## 自訂 Panel Template
 
 ### 參考：
